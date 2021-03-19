@@ -2,8 +2,8 @@ const path = require('path')
 const webpack = require('webpack')
 
 const HtmlWebpackPlugin = require('html-webpack-plugin')
-const { RetryChunkLoadPlugin } = require('webpack-retry-chunk-load-plugin');
-const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin
+//const { RetryChunkLoadPlugin } = require('webpack-retry-chunk-load-plugin');
+//const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin
 const LodashModuleReplacementPlugin = require('lodash-webpack-plugin')
 
 module.exports={
@@ -57,15 +57,15 @@ module.exports={
         }),
         new LodashModuleReplacementPlugin(),
         //new BundleAnalyzerPlugin(),
-        new webpack.ContextReplacementPlugin(/moment[/\\]locale$/, /zh-cn|es/),//去除不必要的locale文件
+       // new webpack.ContextReplacementPlugin(/moment[/\\]locale$/, /zh-cn|es/),//去除不必要的locale文件
         new webpack.ProvidePlugin({
             'intl': 'react-intl-universal',
             'React': 'react',
             'Cookies': 'js-cookie'
         }),
-        new RetryChunkLoadPlugin({
-            maxRetries: 3
-        })
+        // new RetryChunkLoadPlugin({
+        //     maxRetries: 3
+        // })
     ],
     // resolve: {
     //     alias: {

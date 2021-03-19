@@ -15,11 +15,14 @@ class EmailRoutes extends React.Component {
     return (
       <Switch>
         <Route path={`${path}home`}>
-          <Home {...this.props} />
+          <div>test</div>
+          {/* <Home {...this.props} /> */}
         </Route>
    
         <Route path={path}>
-          <Home {...this.props} />
+        <div>test</div>
+
+          {/* <Home {...this.props} /> */}
         </Route>
       </Switch>
     )
