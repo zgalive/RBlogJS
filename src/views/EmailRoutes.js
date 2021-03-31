@@ -2,7 +2,8 @@ import { Switch, Route } from 'react-router-dom'
 import loadable from '@loadable/component'
 import { observer } from 'mobx-react'
 
-const Home = loadable(() => import('../Home/Home'))
+const Home = loadable(() => import('./Home/Home'))
+const BlogDetail = loadable(()=> import('./BlogDetail/BlogDetail'))
 
 
 class EmailRoutes extends React.Component {
@@ -14,15 +15,14 @@ class EmailRoutes extends React.Component {
     const path = this.props.match.path
     return (
       <Switch>
-        <Route path={`${path}home`}>
-          <div>test</div>
-          {/* <Home {...this.props} /> */}
+        <Route path={`${path}home`}>  
+          <Home {...this.props} />
         </Route>
-   
+        <Route path={`${path}home`}>
+          <BlogDetail {...this.props}/>
+        </Route>
         <Route path={path}>
-        <div>test</div>
-
-          {/* <Home {...this.props} /> */}
+          <Home {...this.props} />
         </Route>
       </Switch>
     )

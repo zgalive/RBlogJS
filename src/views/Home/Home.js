@@ -9,18 +9,21 @@ class Home extends React.Component{
     }
 
     render(){
+        console.log('render')
+        return (
         <div>
             {
                 this.store.blogs.map(x=>{
-                    return <div>
+                    return <div onClick={()=>}>
                         <p>Name: {x.name}</p>
                         <p>Age: {x.age}</p>
                         <article>{x.content}</article>
                     </div>
                 })
             }
+            <div style={{display: 'none'}}>{this.store.blogs.length}</div>
             <Button onClick={()=>this.store.addBlog()}>添加新blog</Button>
-        </div>
+        </div>)
     }
 }
 export default observer(Home)

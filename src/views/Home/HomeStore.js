@@ -1,17 +1,23 @@
-import { observable } from "mobx"
+import { observable, action, makeObservable } from "mobx"
 
 class HomeStore {
+    constructor(){
+        makeObservable(this)
+    }
+
     @observable blogs = []
 
     @action addBlog(){
-        let newBlog = this.generateBlog()
-        this.blogs.push(newBlog)
+        let tmp = this.blogs.concat([])
+        tmp.push(this.generateBlog())
+        this.blogs = tmp
+        console.log(this.blogs)
     }
 
     generateBlog(){
         return {
             name: 'Tom',
-            age: Math.random()*10,
+            age: parseInt(Math.random()*10),
             content: "This is blog"
         }
     }

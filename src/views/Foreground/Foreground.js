@@ -1,6 +1,6 @@
 import { Layout, Spin } from 'antd'
 import './Foreground.scss'
-import EmailRoutes from './EmailRoutes'
+import EmailRoutes from '../EmailRoutes'
 import { observer, Provider } from 'mobx-react'
 import ForegroundStore from './ForegroundStore'
 
@@ -28,10 +28,10 @@ class Foreground extends React.Component {
     return (
       <Provider appStore={this.store}>
         <Spin spinning={this.store.showLoading}>
-          <Layout className='foreground-view' style={{ height: '100%' }}>
+          <Layout className='foreground-view'>
            
               <Header className='header'>
-               <p>This is header</p>
+
               </Header>
             <Layout>
 
