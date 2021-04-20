@@ -3,6 +3,7 @@ import './Foreground.scss'
 import EmailRoutes from '../EmailRoutes'
 import { observer, Provider } from 'mobx-react'
 import ForegroundStore from './ForegroundStore'
+import ForegroundHeader from './ForegroundHeader'
 
 const { Header, Content } = Layout
 
@@ -31,7 +32,7 @@ class Foreground extends React.Component {
           <Layout className='foreground-view'>
            
               <Header className='header'>
-
+                <ForegroundHeader />
               </Header>
             <Layout>
 
