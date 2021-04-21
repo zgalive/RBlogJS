@@ -13,3 +13,5 @@ app.get("/api/blog/list", (req, res)=>{
 app.listen(port, () => {
     console.log(`Example app listening at http://localhost:${port}`)
 })
+
+//todo connect to DB
