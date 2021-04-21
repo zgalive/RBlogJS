@@ -1,6 +1,6 @@
 import { Layout, Spin } from 'antd'
 import './Foreground.scss'
-import EmailRoutes from '../EmailRoutes'
+import AppRoutes from '../AppRoutes'
 import { observer, Provider } from 'mobx-react'
 import ForegroundStore from './ForegroundStore'
 import ForegroundHeader from './ForegroundHeader'
@@ -44,7 +44,7 @@ class Foreground extends React.Component {
                   overflow: 'auto'
                 }}
               >
-                <EmailRoutes {...this.props} />
+                <AppRoutes {...this.props} />
               </Content>
             </Layout>
           </Layout>

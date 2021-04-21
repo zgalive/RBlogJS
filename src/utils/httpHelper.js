@@ -14,31 +14,25 @@ const instance = axios.create({
 
 class HttpHelper {
     static REQUEST(url, params, type) {
+        url = "/api"+url
         switch (type) {
             case 'get':
             case 'delete':
                 return instance[type](url, { params }).then(res => {
-                    if (!res) {
-                        return null
-                    }
+                    return !res? null : res.data
                 })
             case 'post':
             case 'put':
             default:
                 return instance[type](url, params).then(res => {
-                    if (!res) {
-                        return null
-                    }
+                    return !res? null : res.data
                 })
         }
     }
 
     static CUSTOMREQUEST(config) {
-       
         return instance.request(config).then(res => {
-            if (!res) {
-                return null
-            }
+            return !res? null : res.data
         })
     }
 }

@@ -1,4 +1,5 @@
 import { observable, action, makeObservable } from "mobx"
+import BlogModules from "../../api/BlogModules"
 
 class HomeStore {
     constructor(){
@@ -6,6 +7,15 @@ class HomeStore {
     }
 
     @observable blogs = []
+
+    @action initStore(){
+        this.getBlogs()
+    }
+
+    @action async getBlogs(){
+        this.blogs = await BlogModules.getBlogs()
+        console.log(this.blogs)
+    }
 
     @action addBlog(){
         let tmp = this.blogs.concat([])

@@ -8,6 +8,10 @@ class Home extends React.Component{
         this.store = new HomeStore()
     }
 
+    componentDidMount(){
+        this.store.initStore()
+    }
+
     render(){
         console.log('render')
         return (

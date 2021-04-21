@@ -77,7 +77,7 @@ module.exports={
         port: 8088,
         proxy: {
             '/api/*': {
-                target: 'http://localhost:4000'
+                target: 'http://localhost:8080'
             },
         },
     }
