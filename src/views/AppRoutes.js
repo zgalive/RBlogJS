@@ -18,7 +18,7 @@ class EmailRoutes extends React.Component {
         <Route path={`${path}home`}>  
           <Home {...this.props} />
         </Route>
-        <Route path={`${path}home`}>
+        <Route path={`${path}detail`}>
           <BlogDetail {...this.props}/>
         </Route>
         <Route path={path}>

@@ -2,8 +2,9 @@ import { observable, action, makeObservable } from "mobx"
 import BlogModules from "../../api/BlogModules"
 
 class HomeStore {
-    constructor(){
+    constructor(props){
         makeObservable(this)
+        this.history = props.history
     }
 
     @observable blogs = []
@@ -30,6 +31,10 @@ class HomeStore {
             age: parseInt(Math.random()*10),
             content: "This is blog"
         }
+    }
+
+    onClickBlog(){
+        this.history.push('/detail')
     }
 }
 
