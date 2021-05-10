@@ -3,9 +3,9 @@ import './ForegroundHeader.scss'
 
 function ForegroundHeader(){
     return <div className="foreground-header">
-        <Button ghost>Home</Button>
-        <Button ghost>Settings</Button>
-        <Button ghost>About</Button>
+        <Button ghost href="/#/">Home</Button>
+        <Button ghost href="/#/settings">Settings</Button>
+        <Button ghost href="/#/about">About</Button>
     </div>
 }
 

@@ -1,9 +1,9 @@
 import { Switch, Route } from 'react-router-dom'
 import loadable from '@loadable/component'
-import { observer } from 'mobx-react'
 
 const Home = loadable(() => import('./Home/Home'))
 const BlogDetail = loadable(()=> import('./BlogDetail/BlogDetail'))
+const SettingFrame = loadable(()=>import('./Settings/SettingFrame'))
 
 
 class EmailRoutes extends React.Component {
@@ -21,6 +21,9 @@ class EmailRoutes extends React.Component {
         <Route path={`${path}detail`}>
           <BlogDetail {...this.props}/>
         </Route>
+        <Route path={`${path}settings`}>
+          <SettingFrame {...this.props}/>
+        </Route>
         <Route path={path}>
           <Home {...this.props} />
         </Route>
@@ -28,4 +31,4 @@ class EmailRoutes extends React.Component {
     )
   }
 }
-export default observer(EmailRoutes)
+export default EmailRoutes
