@@ -65,7 +65,7 @@ module.exports = {
     // new RetryChunkLoadPlugin({
     //     maxRetries: 3
     // })
-  ],
+  ]
   // resolve: {
   //     alias: {
   //         "@ant-design/icons/lib/dist$": path.resolve(__dirname, "./src/icons.js")
