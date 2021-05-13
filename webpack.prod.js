@@ -71,13 +71,13 @@ module.exports = {
   //         "@ant-design/icons/lib/dist$": path.resolve(__dirname, "./src/icons.js")
   //     }
   // },
-  devServer: {
-    contentBase: path.resolve('dist'),
-    port: 8088,
-    proxy: {
-      '/api/*': {
-        target: 'http://localhost:4000'
-      }
-    }
-  }
+  // devServer: {
+  //   contentBase: path.resolve('dist'),
+  //   port: 8088,
+  //   proxy: {
+  //     '/api/*': {
+  //       target: 'http://localhost:4000'
+  //     }
+  //   }
+  // }
 }
