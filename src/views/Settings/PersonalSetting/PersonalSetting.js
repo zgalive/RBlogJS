@@ -1,10 +1,13 @@
-class PersonalSetting extends React.Component{
-    constructor(props){
-        super(props)
-    }
+import PersonalSettingStore from './PersonalSettingStore'
 
-    render(){
-        return <div>personal setting</div>
-    }
+class PersonalSetting extends React.Component {
+  constructor (props) {
+    super(props)
+    this.store = new PersonalSettingStore()
+  }
+
+  render () {
+    return <div>personal setting</div>
+  }
 }
 export default PersonalSetting

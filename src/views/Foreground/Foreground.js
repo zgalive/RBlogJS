@@ -13,10 +13,10 @@ class Foreground extends React.Component {
     this.store = new ForegroundStore()
   }
 
-  UNSAFE_componentWillMount(){
+  UNSAFE_componentWillMount () {
   }
 
-  UNSAFE_componentWillReceiveProps(newProps){
+  UNSAFE_componentWillReceiveProps (newProps) {
   }
 
   componentDidMount () {
@@ -30,10 +30,10 @@ class Foreground extends React.Component {
       <Provider appStore={this.store}>
         <Spin spinning={this.store.showLoading}>
           <Layout className='foreground-view'>
-           
-              <Header className='header'>
-                <ForegroundHeader />
-              </Header>
+
+            <Header className='header'>
+              <ForegroundHeader />
+            </Header>
             <Layout>
 
               <Content

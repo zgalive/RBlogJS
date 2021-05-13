@@ -1,11 +1,14 @@
-class TagSetting extends React.Component {
-    constructor(props){
-        super(props)
-    }
+import TagSettingStore from './TagSettingStore'
 
-    render(){
-        return <div>tag setting</div>
-    }
+class TagSetting extends React.Component {
+  constructor (props) {
+    super(props)
+    this.store = new TagSettingStore()
+  }
+
+  render () {
+    return <div>tag setting</div>
+  }
 }
 
 export default TagSetting

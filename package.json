@@ -7,7 +7,8 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "webpack-dev-server",
     "build": "webpack --config webpack.prod.js",
-    "server": "node ./src/server.js"
+    "server": "node ./src/server.js",
+    "fix": "standard --fix"
   },
   "repository": {
     "type": "git",
@@ -43,6 +44,7 @@
   },
   "devDependencies": {
     "@babel/core": "^7.13.10",
+    "@babel/eslint-parser": "^7.14.2",
     "@babel/plugin-proposal-class-properties": "^7.13.0",
     "@babel/plugin-proposal-decorators": "^7.13.5",
     "@babel/plugin-proposal-optional-chaining": "^7.13.8",
@@ -59,7 +61,9 @@
     "enzyme-adapter-react-16": "^1.15.6",
     "express": "^4.17.1",
     "html-webpack-plugin": "^3.2.0",
+    "husky": "^6.0.0",
     "jest": "^26.6.3",
+    "lint-staged": "^11.0.0",
     "lodash-webpack-plugin": "^0.11.6",
     "node-sass": "^4.12.0",
     "resolve-url-loader": "^3.1.2",
@@ -71,5 +75,19 @@
     "webpack-bundle-analyzer": "^4.4.0",
     "webpack-cli": "^3.3.12",
     "webpack-dev-server": "^3.11.2"
+  },
+  "standard": {
+    "globals": [
+      "intl",
+      "React",
+      "locales",
+      "Cookies"
+    ],
+    "parser": "@babel/eslint-parser"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "yarn run fix"
+    }
   }
 }
