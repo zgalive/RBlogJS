@@ -1,14 +1,14 @@
-import { action, observable, observable, makeObservable } from "mobx"
+import { action, observable, makeObservable } from 'mobx'
 
 class PersonalSettingStore {
-    constructor(){
-        makeObservable(this)
-        this.initStore()
-    }
+  constructor () {
+    makeObservable(this)
+    this.initStore()
+  }
 
     @observable personalSettings = {}
 
-    @action initStore(){
+    @action initStore () {
 
     }
 }
