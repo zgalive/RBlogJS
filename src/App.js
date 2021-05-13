@@ -6,8 +6,8 @@ import { Route, HashRouter } from 'react-router-dom'
 
 // const locales = {
 //   'en-US': resourcesEn,
-//   'zh-CN': resourcesZh
-// }
+//  'zh-CN': resourcesZh
+//}
 
 // class App extends React.Component {
 //   constructor (props) {
@@ -37,14 +37,16 @@ import { Route, HashRouter } from 'react-router-dom'
 //     return (
 //       <ConfigProvider locale={zhCN}>
 //         <HashRouter>
-//           <Route path='/' component={Foreground} />
+//           <Route path='/'>
+//             <Foreground {...this.props}/>
+//           </Route>
 //         </HashRouter>
 //       </ConfigProvider>
 //     )
 //   }
 // }
 
-// export default App
+//export default App
 
 function App () {
   return (

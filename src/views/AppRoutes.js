@@ -37,16 +37,16 @@ export default function EmailRoutes (props) {
   return (
     <Switch>
       <Route path={`${path}home`}>
-        <Home {...this.props} />
+        <Home {...props} />
       </Route>
       <Route path={`${path}detail`}>
-        <BlogDetail {...this.props} />
+        <BlogDetail {...props} />
       </Route>
       <Route path={`${path}settings`}>
-        <SettingFrame {...this.props} />
+        <SettingFrame {...props} />
       </Route>
       <Route path={path}>
-        <Home {...this.props} />
+        <Home {...props} />
       </Route>
     </Switch>
   )
