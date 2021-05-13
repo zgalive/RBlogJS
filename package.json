@@ -8,14 +8,13 @@
     "start": "webpack-dev-server",
     "build": "webpack --config webpack.prod.js",
     "server": "node ./src/server.js",
-    "fix": "standard --fix",
-    "prepare": "husky install"
+    "fix": "standard --fix"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/zgalive/RBlogJS.git"
   },
-  "homepage": "https://zgalive.github.io/RBlog-demo",
+  "homepage": "http://zgalive.github.io/RBlogJS/",
   "author": "",
   "license": "ISC",
   "bugs": {
