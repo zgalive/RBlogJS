@@ -8,7 +8,8 @@
     "start": "webpack-dev-server",
     "build": "webpack --config webpack.prod.js",
     "server": "node ./src/server.js",
-    "fix": "standard --fix"
+    "fix": "standard --fix",
+    "prepare": "husky install"
   },
   "repository": {
     "type": "git",

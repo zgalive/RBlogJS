@@ -1,4 +1,4 @@
-import { action, observable, action, makeObservable } from "mobx"
+import { action, observable, observable, makeObservable } from "mobx"
 
 class PersonalSettingStore {
     constructor(){
