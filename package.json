@@ -7,6 +7,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "webpack-dev-server",
     "build": "webpack --config webpack.prod.js",
+    "gh-page": "webpack --config webpack.github.js",
     "server": "node ./src/server.js",
     "fix": "standard --fix"
   },
