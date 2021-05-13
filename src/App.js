@@ -7,7 +7,7 @@ import { Route, HashRouter } from 'react-router-dom'
 // const locales = {
 //   'en-US': resourcesEn,
 //  'zh-CN': resourcesZh
-//}
+// }
 
 // class App extends React.Component {
 //   constructor (props) {
@@ -46,7 +46,7 @@ import { Route, HashRouter } from 'react-router-dom'
 //   }
 // }
 
-//export default App
+// export default App
 
 function App () {
   return (

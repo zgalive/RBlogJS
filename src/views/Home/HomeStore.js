@@ -11,7 +11,7 @@ class HomeStore {
     @observable blogs = []
 
     @action initStore () {
-      //this.getBlogs()
+      // this.getBlogs()
     }
 
     @action async getBlogs () {
