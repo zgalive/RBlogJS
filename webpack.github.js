@@ -8,7 +8,7 @@ module.exports = {
   mode: 'production',
   entry: './src/index.js',
   output: {
-    publicPath: '/RBlogJS',
+    publicPath: '/RBlogJS/',
     filename: '[name].[hash].js',
     path: path.resolve('dist')
   },
