@@ -15,12 +15,12 @@
     "type": "git",
     "url": "git+https://github.com/zgalive/RBlogJS.git"
   },
+  "homepage": "https://zgalive.github.io/RBlog-demo",
   "author": "",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/zgalive/RBlogJS/issues"
   },
-  "homepage": "https://github.com/zgalive/RBlogJS#readme",
   "dependencies": {
     "@babel/runtime": "^7.13.10",
     "@loadable/component": "^5.14.1",
