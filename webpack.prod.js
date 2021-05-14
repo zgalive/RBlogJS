@@ -3,8 +3,9 @@ const webpack = require('webpack')
 
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 // const { RetryChunkLoadPlugin } = require('webpack-retry-chunk-load-plugin');
-// const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin
+//const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin
 const LodashModuleReplacementPlugin = require('lodash-webpack-plugin')
+const CleanWebpackPlugin = require('clean-webpack-plugin')
 
 module.exports = {
   mode: 'production',
@@ -14,10 +15,10 @@ module.exports = {
     filename: '[name].[hash].js',
     path: path.resolve('dist')
   },
-  // externals: {
-  //     'react': 'React',
-  //     'react-dom': 'ReactDOM',
-  // },
+  externals: {
+      'react': 'React',
+      'react-dom': 'ReactDOM',
+  },
   module: {
     rules: [
       {
@@ -55,7 +56,8 @@ module.exports = {
       filename: 'index.html'
     }),
     new LodashModuleReplacementPlugin(),
-    // new BundleAnalyzerPlugin(),
+    new CleanWebpackPlugin.CleanWebpackPlugin(),
+    //new BundleAnalyzerPlugin(),
     // new webpack.ContextReplacementPlugin(/moment[/\\]locale$/, /zh-cn|es/),//去除不必要的locale文件
     new webpack.ProvidePlugin({
       intl: 'react-intl-universal',
@@ -71,13 +73,4 @@ module.exports = {
   //         "@ant-design/icons/lib/dist$": path.resolve(__dirname, "./src/icons.js")
   //     }
   // },
-  // devServer: {
-  //   contentBase: path.resolve('dist'),
-  //   port: 8088,
-  //   proxy: {
-  //     '/api/*': {
-  //       target: 'http://localhost:4000'
-  //     }
-  //   }
-  // }
 }
