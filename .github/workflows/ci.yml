@@ -23,4 +23,4 @@ jobs:
           SOURCE: "dist/"
           REMOTE_HOST: ${{ secrets.REMOTE_HOST }}
           REMOTE_USER: ${{ secrets.REMOTE_USR }}
-          TARGET: ${{ secrets.TARGET_FOLDER }}
+          TARGET: ${{ secrets.REMOTE_FOLDER }}
