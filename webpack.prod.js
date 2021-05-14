@@ -3,7 +3,7 @@ const webpack = require('webpack')
 
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 // const { RetryChunkLoadPlugin } = require('webpack-retry-chunk-load-plugin');
-//const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin
+// const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin
 const LodashModuleReplacementPlugin = require('lodash-webpack-plugin')
 const CleanWebpackPlugin = require('clean-webpack-plugin')
 
@@ -16,8 +16,8 @@ module.exports = {
     path: path.resolve('dist')
   },
   externals: {
-      'react': 'React',
-      'react-dom': 'ReactDOM',
+    react: 'React',
+    'react-dom': 'ReactDOM'
   },
   module: {
     rules: [
@@ -57,7 +57,7 @@ module.exports = {
     }),
     new LodashModuleReplacementPlugin(),
     new CleanWebpackPlugin.CleanWebpackPlugin(),
-    //new BundleAnalyzerPlugin(),
+    // new BundleAnalyzerPlugin(),
     // new webpack.ContextReplacementPlugin(/moment[/\\]locale$/, /zh-cn|es/),//去除不必要的locale文件
     new webpack.ProvidePlugin({
       intl: 'react-intl-universal',

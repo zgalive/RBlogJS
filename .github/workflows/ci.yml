@@ -2,7 +2,7 @@ name: RBlog Demo
 on:
   push:
     branches:
-      - uat
+      - dit
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
@@ -14,10 +14,13 @@ jobs:
     - name: Install and Build
       run: |
         yarn install
-        yarn run gh-page
-    - name: Deploy
-      uses: JamesIves/github-pages-deploy-action@releases/v3
-      with:
-        ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
-        BRANCH: gh-pages
-        FOLDER: dist
+        yarn run build
+    - name: Deploy to Server
+      uses: easingthemes/ssh-deploy@v2.1.5
+      env:
+          SSH_PRIVATE_KEY: ${{ secrets.SERVER_SSH_KEY }}
+          ARGS: "-rltgoDzvO --delete"
+          SOURCE: "dist/"
+          REMOTE_HOST: ${{ secrets.REMOTE_HOST }}
+          REMOTE_USER: ${{ secrets.REMOTE_USR }}
+          TARGET: ${{ secrets.TARGET_FOLDER }}
