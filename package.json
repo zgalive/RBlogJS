@@ -22,6 +22,7 @@
     "url": "https://github.com/zgalive/RBlogJS/issues"
   },
   "dependencies": {
+    "@ant-design/icons": "^4.6.2",
     "@babel/runtime": "^7.13.10",
     "@loadable/component": "^5.14.1",
     "antd": "^4.14.0",

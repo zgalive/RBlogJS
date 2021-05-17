@@ -29,8 +29,10 @@ class HomeStore {
     generateBlog () {
       return {
         name: 'Tom',
+        title: 'Daily Report',
         age: parseInt(Math.random() * 10),
         content: 'This is blog',
+        description: 'This is description',
         id: random(100)
       }
     }
