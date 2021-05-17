@@ -31,23 +31,9 @@ class Home extends React.Component {
                 }
         <div style={{ display: 'none' }}>{this.store.blogs.length}</div>
         <Button onClick={() => this.store.addBlog()}>添加新blog</Button>
+        <div>测试自动部署</div>
       </div>
     )
   }
 }
 export default observer(Home)
-
-// function Home(props){
-//     let [count, setCount] = useState(0)
-
-//     useEffect(() => {
-//         // 使用浏览器的 API 更新页面标题
-//         document.title = `You clicked ${count} times`;
-//     });
-
-//     return <div>
-//         {count}
-//         <Button onClick={()=>setCount(count+1)}>增加</Button>
-//     </div>
-// }
-// export default Home
