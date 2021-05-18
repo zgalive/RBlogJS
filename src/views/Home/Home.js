@@ -7,6 +7,7 @@ import {
   LikeOutlined,
   MessageOutlined
 } from '@ant-design/icons'
+import NewBlogModal from '../Modals/NewBlogModal'
 
 class Home extends React.Component {
   constructor (props) {
@@ -34,9 +35,9 @@ class Home extends React.Component {
           <List.Item
             key={item.title}
             actions={[
-              <span key="action-1"><StarOutlined style={{ marginRight: 8 }} key='list-vertical-star-o' />112</span>,
-              <span key="action-2"><LikeOutlined style={{ marginRight: 8 }} key='list-vertical-like-o' />123</span>,
-              <span key="action-3"><MessageOutlined style={{ marginRight: 8 }} key='list-vertical-message' />2</span>
+              <span key='action-1'><StarOutlined style={{ marginRight: 8 }} key='list-vertical-star-o' />112</span>,
+              <span key='action-2'><LikeOutlined style={{ marginRight: 8 }} key='list-vertical-like-o' />123</span>,
+              <span key='action-3'><MessageOutlined style={{ marginRight: 8 }} key='list-vertical-message' />2</span>
             ]}
           >
             <List.Item.Meta
@@ -54,8 +55,9 @@ class Home extends React.Component {
   render () {
     return (
       <div>
-        {this.renderListItem(this.store.blogs)}
         <Button onClick={() => this.store.addBlog()}>添加新blog</Button>
+        {this.renderListItem(this.store.blogs)}
+        <NewBlogModal visible={this.store.newBlogVisible} onCancel={() => this.store.toggleModal('newBlogVisible', false) }/>
       </div>
     )
   }
