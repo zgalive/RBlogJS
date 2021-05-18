@@ -26,7 +26,7 @@ class HomeStore {
       this.history.push('/detail')
     }
 
-    @action toggleModal(modalName, visible){
+    @action toggleModal (modalName, visible) {
       this[modalName] = visible
     }
 }

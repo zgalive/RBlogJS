@@ -57,7 +57,7 @@ class Home extends React.Component {
       <div>
         <Button onClick={() => this.store.addBlog()}>添加新blog</Button>
         {this.renderListItem(this.store.blogs)}
-        <NewBlogModal visible={this.store.newBlogVisible} onCancel={() => this.store.toggleModal('newBlogVisible', false) }/>
+        <NewBlogModal visible={this.store.newBlogVisible} onCancel={() => this.store.toggleModal('newBlogVisible', false)} />
       </div>
     )
   }
